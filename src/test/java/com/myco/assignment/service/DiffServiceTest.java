@@ -21,6 +21,7 @@ public class DiffServiceTest {
 	private String id = "1";
 	private String leftData = "{\"name\":\"John\",\"age\":30,\"city\":\"Utrecht\"}";
 	private String rightData = "{\"name\":\"John\",\"age\":31,\"city\":\"Utrecht\"}";
+	
 	private String jsonMessage = "[{\"offset\":22,\"length\":1}]";
 	
 	@Before
