@@ -6,7 +6,7 @@
 	<groupId>com.myco</groupId>
 	<artifactId>assignment</artifactId>
 	<version>0.1</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>assignment</name>
 	<description></description>
@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<start-class>com.myco.assignment.AssignmentApplication</start-class>
 	</properties>
 
 	<dependencies>
@@ -38,6 +39,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-tomcat</artifactId>
+    		<scope>provided</scope>
 		</dependency>
 
 		<dependency>
