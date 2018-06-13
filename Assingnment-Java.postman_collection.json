@@ -1,0 +1,147 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Assingnment Java",
+		"_postman_id": "9daeaa2e-cdcf-d7d3-2ced-85585d417887",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LEFT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"eyJuYW1lIjoiSm9obiIsImFnZSI6MzAsImNpdHkiOiJVdHJlY2h0In0=\"] = responseBody.has(\"true\");",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8889/assignment/v1/diff/100/left",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "eyJuYW1lIjoiSm9obiIsImFnZSI6MzAsImNpdHkiOiJVdHJlY2h0In0="
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "RIGHT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.clearGlobalVariable(\"variable_key\");",
+							"postman.clearEnvironmentVariable(\"variable_key\");",
+							"",
+							"tests[\"eyJuYW1lIjoiSm9obiIsImFnZSI6MzEsImNpdHkiOiJVdHJlY2h0In0\"] = responseBody.has(\"true\");",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8889/assignment/v1/diff/100/right",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "eyJuYW1lIjoiSm9obiIsImFnZSI6MzEsImNpdHkiOiJVdHJlY2h0In0"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body is correct\"] = responseBody === \"{message:'left data and right data have different lengths'}\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8889/assignment/v1/diff/100",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "RIGHT KOHN",
+			"request": {
+				"url": "http://localhost:8889/assignment/v1/diff/100/right",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "eyJuYW1lIjoiS29obiIsImFnZSI6MzEsImNpdHkiOiJVbHRyZWN0In0="
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "MAIOR",
+			"request": {
+				"url": "http://localhost:8889/assignment/v1/diff/100/right",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "eyJuYW1lIjoiSm9obiIsImFnZSI6MzAsImNpdHkiOiJJSnNzZWxzdGVpbi9VdHJlY2h0In0="
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DATA",
+			"request": {
+				"url": "http://localhost:8889/assignment/v1/diff/100/data",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DIFF",
+			"request": {
+				"url": "http://localhost:8889/assignment/v1/diff/100",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
