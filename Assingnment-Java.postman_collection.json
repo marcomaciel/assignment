@@ -15,9 +15,7 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"eyJuYW1lIjoiSm9obiIsImFnZSI6MzAsImNpdHkiOiJVdHJlY2h0In0=\"] = responseBody.has(\"true\");",
-							"tests[\"Status code is 200\"] = responseCode.code === 200;",
-							"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+							"tests[\"eyJuYW1lIjoiSm9obiIsImFnZSI6MzAsImNpdHkiOiJVdHJlY2h0In0=\"] = responseBody.has(\"true\");"
 						]
 					}
 				}
