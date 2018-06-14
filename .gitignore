@@ -6,6 +6,7 @@ target/
 .project
 .mvn
 mvn*
+newman/
 
 ### STS ###
 .apt_generated
