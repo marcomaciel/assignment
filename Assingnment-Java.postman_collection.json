@@ -42,12 +42,9 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"postman.clearGlobalVariable(\"variable_key\");",
-							"postman.clearEnvironmentVariable(\"variable_key\");",
-							"",
 							"tests[\"eyJuYW1lIjoiSm9obiIsImFnZSI6MzEsImNpdHkiOiJVdHJlY2h0In0\"] = responseBody.has(\"true\");",
 							"tests[\"Status code is 200\"] = responseCode.code === 200;",
-							"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+							""
 						]
 					}
 				}
@@ -66,17 +63,6 @@
 		},
 		{
 			"name": "GET",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"tests[\"Body is correct\"] = responseBody === \"{message:'left data and right data have different lengths'}\";"
-						]
-					}
-				}
-			],
 			"request": {
 				"url": "http://localhost:8889/assignment/v1/diff/100",
 				"method": "GET",
@@ -134,6 +120,17 @@
 		},
 		{
 			"name": "DIFF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Diff Status request == 200\"] = responseCode.code === 200 ;"
+						]
+					}
+				}
+			],
 			"request": {
 				"url": "http://localhost:8889/assignment/v1/diff/100",
 				"method": "GET",
