@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "LEFT",
+			"name": "LEFT METHOD",
 			"event": [
 				{
 					"listen": "test",
@@ -35,7 +35,7 @@
 			"response": []
 		},
 		{
-			"name": "RIGHT",
+			"name": "RIGHT METHOD",
 			"event": [
 				{
 					"listen": "test",
@@ -101,7 +101,7 @@
 			"response": []
 		},
 		{
-			"name": "DATA",
+			"name": "DATA METHOD",
 			"request": {
 				"url": "http://localhost:8889/assignment/v1/diff/100/data",
 				"method": "GET",
@@ -119,7 +119,7 @@
 			"response": []
 		},
 		{
-			"name": "DIFF",
+			"name": "DIFF METHOD",
 			"event": [
 				{
 					"listen": "test",
